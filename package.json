@@ -1,0 +1,15 @@
+{
+  "name": "test-node-js",
+  "version": "1.0.0",
+  "description": "this is just testing ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shubh Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "color": "^4.2.3",
+    "colors": "^1.4.0"
+  }
+}
