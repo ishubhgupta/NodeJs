@@ -3,7 +3,9 @@ const app = express();
 
 app.get('', (req, resp)=>{
     console.log("data sent by browser = ", req.query.name)
-    resp.send("Hello " + req.query.name);
+    resp.send(` <h1>Hello</h1>   ${req.query.name}
+        <a href="/about">Go to about page</a>`
+    );
 });
 app.get('/about', (req, resp)=>{
     resp.send("Hello World from about");
