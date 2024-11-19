@@ -1,18 +1,20 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
-app.get('', (req, resp)=>{
-    console.log("data sent by browser = ", req.query.name)
-    resp.send(` <h1>Hello</h1>   ${req.query.name}
-        <a href="/about">Go to about page</a>`
-    );
-});
-app.get('/about', (req, resp)=>{
-    resp.send("Hello World from about");
-});
+const dirPath = path.join(__dirname, 'public');
+console.log(dirPath);
 
-app.get('/help', (req, resp)=>{
-    resp.send("Hello World from help page!!");
-});
+// app.use(express.static(dirPath));
+
+app.get('', (req, resp)=>{
+    resp.sendFile(`${dirPath}/index.html`);
+})
+app.get('/about', (req, resp)=>{
+    resp.sendFile(`${dirPath}/about.html`);
+})
+app.get('*', (req, resp)=>{
+    resp.sendFile(`${dirPath}/nopage.html`);
+})
 
 app.listen(4500);
