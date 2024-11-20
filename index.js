@@ -3,10 +3,25 @@ const path = require('path');
 const app = express();
 
 const dirPath = path.join(__dirname, 'public');
-console.log(dirPath);
+// console.log(dirPath);
 
 // app.use(express.static(dirPath));
 app.set('view engine', 'ejs')
+
+const reqFilter = (req, resp, next)=>{
+    if(!req.query.age){
+        resp.send("Please Provide Age!!");
+    }
+    else if(req.query.age < 18){
+        resp.send("You cannot acess this site");
+    }
+    else{
+        next();
+    }
+   
+}
+
+app.use(reqFilter);
 
 app.get('', (req, resp)=>{
     resp.sendFile(`${dirPath}/index.html`);
