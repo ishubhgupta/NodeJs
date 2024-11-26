@@ -10,4 +10,16 @@ This repository has multiple branches, each dedicated to a specific topic:
 - **basics**: This branch covers the basics of Node.js.
 - **Database**: This branch covers database and how to use it with Node.js.
 
-To switch to a specific branch, use the following commands:
+
+## Resources
+Here are some resources that I've found helpful in my learning journey:
+
+- [Node.js Official Documentation](https://nodejs.org/en/docs/)
+- [MongoDB Official Documentation](https://www.mongodb.com/docs/)
+- [Node.js Tutorials on W3Schools](https://www.w3schools.com/nodejs/)
+- [MongoDB University Tutorials](https://university.mongodb.com/)
+
+Feel free to explore the branches and use the resources provided. Happy learning!
+
+## Follow My Journey
+If you want to follow my progress and stay updated, make sure to **star and watch this repository** and check back often for updates.
