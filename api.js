@@ -20,4 +20,12 @@ app.post('/', async (req, res)=>{
     console.log(req.body)
     res.send(req.body);
 })
+
+app.put('/', async (req, res)=>{
+    console.log(req.body);
+    let db = await dbConnect();
+    let data = db.collection('products');
+    let result = data.updateOne({name: 'Nokia 1010'}, {$set: req.body})
+    res.send({result: 'updated'});
+})
 app.listen(4500);
